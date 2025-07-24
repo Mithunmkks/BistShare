@@ -29,22 +29,21 @@ const languageConfig = {
 };
 
 
-
-
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      scriptSrc: ["'self'", "https:", "'unsafe-inline'"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com", "'unsafe-inline'"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      scriptSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "https:"],
       connectSrc: ["'self'", process.env.CLIENT_ORIGIN || '*'],
-      imgSrc: ["'self'"],
-      // Add more directives here if needed
+      objectSrc: ["'none'"],
+      mediaSrc: ["'self'", "https:"],
+      frameSrc: ["'self'"],
     },
   })
 );
-
 
 
 // Enable CORS
