@@ -5,6 +5,7 @@ const { Server } = require("socket.io");
 const ACTIONS = require("./Actions");
 const cors = require("cors");
 const axios = require("axios");
+const helmet = require("helmet"); 
 const server = http.createServer(app);
 require("dotenv").config();
 
@@ -26,6 +27,25 @@ const languageConfig = {
   rust: { versionIndex: "3" },
   r: { versionIndex: "3" },
 };
+
+
+
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      scriptSrc: ["'self'"],
+      connectSrc: ["'self'", process.env.CLIENT_ORIGIN || '*'],
+      imgSrc: ["'self'"],
+      // Add more directives here if needed
+    },
+  })
+);
+
+
 
 // Enable CORS
 app.use(cors());
