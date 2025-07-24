@@ -54,13 +54,6 @@ app.use(express.json());
 
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "../client/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
-
-
 
 
 const io = new Server(server, {
@@ -141,6 +134,16 @@ app.post("/compile", async (req, res) => {
     res.status(500).json({ error: "Failed to compile code" });
   }
 });
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
+
+
+
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server is runnint on port ${PORT}`));
