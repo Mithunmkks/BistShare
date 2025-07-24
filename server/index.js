@@ -52,6 +52,18 @@ app.use(cors());
 // Parse JSON bodies
 app.use(express.json());
 
+const path = require("path");
+
+// Serve static frontend build
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
+
+
+
+
 const io = new Server(server, {
   cors: {
     origin: process.env.CLIENT_ORIGIN,
