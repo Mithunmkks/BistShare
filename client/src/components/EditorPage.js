@@ -114,10 +114,13 @@ function EditorPage() {
   const runCode = async () => {
     setIsCompiling(true);
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/compile`, {
-        code: codeRef.current,
-        language: selectedLanguage,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/compile`,
+        {
+          code: codeRef.current,
+          language: selectedLanguage,
+        }
+      );
       console.log("Backend response:", response.data);
       setOutput(response.data.output || JSON.stringify(response.data));
     } catch (error) {
@@ -138,7 +141,7 @@ function EditorPage() {
         {/* Client panel */}
         <div className="col-md-2 bg-dark text-light d-flex flex-column">
           <img
-            src="/images/codecast.png"
+            src="/images/BitsShare.jpg"
             alt="Logo"
             className="img-fluid mx-auto"
             style={{ maxWidth: "150px", marginTop: "-43px" }}

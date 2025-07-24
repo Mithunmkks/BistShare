@@ -4,12 +4,11 @@ BistShare is a real-time code collaboration web application that allows multiple
 
 ## Live Demo
 
-You can try out CodeCast by visiting the [live demo](https://codecast-324z.onrender.com). Create or join a room and start collaborating with others in real time!
+You can try out BitsShare by visiting the [live demo](https://bistshare.onrender.com). Create or join a room and start collaborating with others in real time!
+
 ### DEMO VIDEO
 
-
 https://github.com/user-attachments/assets/95693e6e-8d0f-4e1e-9b65-462c994f47ec
-
 
 ## Features
 
@@ -30,21 +29,22 @@ https://github.com/user-attachments/assets/95693e6e-8d0f-4e1e-9b65-462c994f47ec
 
 ## Usage
 
-1. Open the [CodeCast live demo](https://codecast-324z.onrender.com).
+1. Open the [BitsShare live demo](https://bistshare.onrender.com).
 2. Enter a Room ID or generate a new one.
 3. Set your username.
 4. Start collaborating with others in the same room.
 
 ## Development
 
-If you want to run CodeCast locally or contribute to its development, follow these steps:
+If you want to run BitsShare locally or contribute to its development, follow these steps:
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/codecast.git
-   cd codecast
+   git clone https://github.com/yourusername/BitsShare.git
+   cd BitsShare
    ```
+
 2. Install dependencies:
    ```
    npm install
