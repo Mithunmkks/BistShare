@@ -1,11 +1,14 @@
-# CodeCast - Real-time Code Collaboration
+# BitsShare - Real-time Code Collaboration
 
-CodeCast is a real-time code collaboration web application that allows multiple users to collaborate on code in the same virtual room. It's built using the MERN (MongoDB, Express.js, React, Node.js) stack and Socket.IO for real-time communication.
+BistShare is a real-time code collaboration web application that allows multiple users to collaborate on code in the same virtual room. It's built using ( React, Node.js) stack and Socket.IO for real-time communication.
 
 ## Live Demo
 
 You can try out CodeCast by visiting the [live demo](https://codecast-324z.onrender.com). Create or join a room and start collaborating with others in real time!
 ### DEMO VIDEO
+
+
+https://github.com/user-attachments/assets/95693e6e-8d0f-4e1e-9b65-462c994f47ec
 
 
 ## Features
